@@ -37,6 +37,14 @@ public class StockFileReader {
 	public List<String> readFileData() throws IOException{
 		List<String> lines = new ArrayList<String>();
 		// Insert your code here..
+		try(FileReader fr = new FileReader(filePath);
+				BufferedReader br = new BufferedReader(fr)){
+				br.readLine();
+				String line = null;
+				while((line = br.readLine()) != null) {
+					lines.add(line);
+				}	
+		}
 	    return lines;
 	}
 	

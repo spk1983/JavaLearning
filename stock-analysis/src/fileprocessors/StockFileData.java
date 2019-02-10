@@ -9,7 +9,10 @@ public class StockFileData {
 	List<HashMap<String, Double>> data = new LinkedList<>();
 	
 	public void printData(){
-		System.out.println(data);
+		for(int i=0; i<data.size(); i++) {
+			System.out.println(data.get(i));
+		}
+		
 	}
 	
 	public void addData(List<HashMap<String, Double>> dataIn){
